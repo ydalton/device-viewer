@@ -1,6 +1,6 @@
 blueprints = custom_target('blueprints',
   input: files(
-    'ui/window.blp'
+    'window.blp'
   ),
   output: '.',
   command: [
