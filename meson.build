@@ -6,9 +6,11 @@ dependencies = [
 ]
 
 gnome = import('gnome')
+i18n = import('i18n')
 
 devmgr_sources = files()
 subdir('src')
+subdir('po')
 
 conf = configuration_data()
 conf.set_quoted('APP_ID', meson.project_name())
