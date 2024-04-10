@@ -10,6 +10,18 @@ gnome = import('gnome')
 devmgr_sources = files()
 subdir('src')
 
+conf = configuration_data()
+conf.set_quoted('APP_ID', meson.project_name())
+conf.set_quoted('VERSION', meson.project_version())
+
+config_file = configure_file(
+  input: 'src/config.vala.in',
+  output: '@BASENAME@',
+  configuration: conf
+)
+
+devmgr_sources += config_file
+
 exe = executable(
   meson.project_name(), 
   devmgr_sources, 
