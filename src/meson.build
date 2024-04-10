@@ -1,6 +1,7 @@
 blueprints = custom_target('blueprints',
   input: files(
-    'window.blp'
+    'window.blp',
+    'pages/drm/drm.blp',
   ),
   output: '.',
   command: [
@@ -22,4 +23,5 @@ devmgr_sources += gnome.compile_resources(
 devmgr_sources += files(
   'main.vala',
   'application-window.vala',
+  'pages/drm/drm.vala',
 )

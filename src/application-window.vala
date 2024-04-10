@@ -1,9 +1,14 @@
-[GtkTemplate(ui="/io/github/ydalton/DeviceManager/ui/window.ui")]
+[GtkTemplate(ui="/io/github/ydalton/DeviceViewer/ui/window.ui")]
 public class Dm.ApplicationWindow : Adw.ApplicationWindow {
 	[GtkChild]
 	private unowned Adw.NavigationPage main_page;
 	[GtkChild]
 	private unowned Gtk.Stack stack;
+	/* HACK: apparently the DmPageDrm class isn't registered without putting it
+	 * here.
+	 */
+	[GtkChild]
+	private unowned Dm.PageDrm drm;
 
 	[GtkCallback]
 	public void notify_visible_child_cb()

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-	<gresource prefix="/io/github/ydalton/DeviceManager/ui">
+	<gresource prefix="/io/github/ydalton/DeviceViewer/ui">
 		<file compressed="true" preprocess="xml-stripblanks">window.ui</file>
+		<file compressed="true" preprocess="xml-stripblanks">pages/drm/drm.ui</file>
 	</gresource>
 </gresources>

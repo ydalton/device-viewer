@@ -35,9 +35,7 @@ template $DmApplicationWindow : Adw.ApplicationWindow {
 					StackPage {
 						title: "Display adapters (DRM)";
 						child:
-						Label {
-							label: "GPU devices go here:";
-						};
+						$DmPageDrm drm {};
 					}
 					StackPage {
 						title: "Monitors";
