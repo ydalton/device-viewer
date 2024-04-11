@@ -24,5 +24,5 @@ devmgr_sources += gnome.compile_resources(
 
 devmgr_sources += files(
   'main.vala',
-  'application-window.vala',
+  'window.vala',
 )

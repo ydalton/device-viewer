@@ -1,5 +1,5 @@
 [GtkTemplate(ui="/io/github/ydalton/DeviceViewer/ui/window.ui")]
-public class Dm.ApplicationWindow : Adw.ApplicationWindow {
+public class Dm.Window : Adw.ApplicationWindow {
 	[GtkChild]
 	private unowned Adw.NavigationPage main_page;
 	[GtkChild]
@@ -16,9 +16,10 @@ public class Dm.ApplicationWindow : Adw.ApplicationWindow {
 	 */
 	static construct {
 		typeof(Dm.PageDrm).ensure();
+		typeof(Dm.PageMonitors).ensure();
 	}
 
-	public ApplicationWindow(Adw.Application app) {
+	public Window(Adw.Application app) {
 		typeof(Dm.PageDrm).ensure();
 		Object(application: app);
 
