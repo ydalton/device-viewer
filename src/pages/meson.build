@@ -1,5 +1,6 @@
 devmgr_sources += files(
   'drm/drm.vala',
+  'drm/device.vala',
   'monitors/monitors.vala',
 )
 

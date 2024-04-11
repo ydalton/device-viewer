@@ -1,8 +1,11 @@
 project('io.github.ydalton.DeviceViewer', ['c', 'vala'],
   version : '0.1')
 
+valac = meson.get_compiler('vala')
+
 dependencies = [
     dependency('libadwaita-1'),
+    valac.find_library('posix'),
 ]
 
 gnome = import('gnome')
