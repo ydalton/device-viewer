@@ -2,7 +2,7 @@
 <gresources>
 	<gresource prefix="/io/github/ydalton/DeviceViewer/ui">
 		<file compressed="true" preprocess="xml-stripblanks">window.ui</file>
-		<file compressed="true" preprocess="xml-stripblanks">pages/drm/drm.ui</file>
-		<file compressed="true" preprocess="xml-stripblanks">pages/monitors/monitors.ui</file>
+		<file compressed="true" preprocess="xml-stripblanks">view/drm/drm.ui</file>
+		<file compressed="true" preprocess="xml-stripblanks">view/monitors/monitors.ui</file>
 	</gresource>
 </gresources>

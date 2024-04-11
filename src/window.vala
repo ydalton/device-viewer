@@ -15,8 +15,8 @@ public class Dm.Window : Adw.ApplicationWindow {
 	 * a UI file.
 	 */
 	static construct {
-		typeof(Dm.Drm.Page).ensure();
-		typeof(Dm.Monitors.Page).ensure();
+		typeof(Dm.View.Drm).ensure();
+		typeof(Dm.View.Monitors).ensure();
 	}
 
 	public Window(Adw.Application app) {

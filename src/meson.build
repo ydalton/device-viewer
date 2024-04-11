@@ -1,7 +1,8 @@
 blueprint_sources = files(
   'window.blp'
 )
-subdir('pages')
+subdir('view')
+subdir('model')
 
 blueprints = custom_target('blueprints',
   input: blueprint_sources,

@@ -1,7 +1,18 @@
 const string DRM_SYSFS_DIR = "/sys/class/drm";
 
-[GtkTemplate(ui="/io/github/ydalton/DeviceViewer/ui/pages/drm/drm.ui")]
-public class Dm.Drm.Page : Adw.Bin {
+namespace Dm.Model {
+
+class Device {
+	public string driver { get; private set; }
+	public string name { get; private set; }
+
+	public Device(string name, string driver) {
+		this.driver = driver;
+		this.name = name;
+	}
+}
+
+public class Drm : Object {
 	private List<Device> devices;
 
 	private bool is_drm_device(string name) {
@@ -54,3 +65,5 @@ public class Dm.Drm.Page : Adw.Bin {
 		debug_all_devices();
 	}
 }
+
+} // namespace Dm.Model
