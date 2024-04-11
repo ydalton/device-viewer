@@ -15,12 +15,11 @@ public class Dm.Window : Adw.ApplicationWindow {
 	 * a UI file.
 	 */
 	static construct {
-		typeof(Dm.PageDrm).ensure();
-		typeof(Dm.PageMonitors).ensure();
+		typeof(Dm.Drm.Page).ensure();
+		typeof(Dm.Monitors.Page).ensure();
 	}
 
 	public Window(Adw.Application app) {
-		typeof(Dm.PageDrm).ensure();
 		Object(application: app);
 
 		notify_visible_child_cb();
