@@ -5,5 +5,6 @@ devmgr_sources += files(
 
 blueprint_sources += files(
   'drm/drm.blp',
+  'drm/device.blp',
   'monitors/monitors.blp',
 )

@@ -1,0 +1,19 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $DmViewDrmDevice : Adw.Bin {
+  child:
+  Adw.Clamp {
+    Box {
+      orientation: vertical;
+      Label title {
+        styles [
+          'title-1'
+        ]
+      }
+      Label driver_name {
+
+      }
+    }
+  };
+}

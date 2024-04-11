@@ -2,7 +2,7 @@ const string DRM_SYSFS_DIR = "/sys/class/drm";
 
 namespace Dm.Model {
 
-class Device {
+public class Device {
 	public string driver { get; private set; }
 	public string name { get; private set; }
 
@@ -13,7 +13,7 @@ class Device {
 }
 
 public class Drm : Object {
-	private List<Device> devices;
+	public List<Device> devices;
 
 	private bool is_drm_device(string name) {
 		Dir dir;
