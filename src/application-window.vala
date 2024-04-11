@@ -4,11 +4,6 @@ public class Dm.ApplicationWindow : Adw.ApplicationWindow {
 	private unowned Adw.NavigationPage main_page;
 	[GtkChild]
 	private unowned Gtk.Stack stack;
-	/* HACK: apparently the DmPageDrm class isn't registered without putting it
-	 * here.
-	 */
-	[GtkChild]
-	private unowned Dm.PageDrm drm;
 
 	[GtkCallback]
 	public void notify_visible_child_cb()
@@ -16,7 +11,15 @@ public class Dm.ApplicationWindow : Adw.ApplicationWindow {
 		main_page.title = stack.get_page(stack.visible_child).title;
 	}
 
+	/* Ensure type of component so that its type is registered when using it in
+	 * a UI file.
+	 */
+	static construct {
+		typeof(Dm.PageDrm).ensure();
+	}
+
 	public ApplicationWindow(Adw.Application app) {
+		typeof(Dm.PageDrm).ensure();
 		Object(application: app);
 
 		notify_visible_child_cb();
