@@ -4,7 +4,15 @@ using Adw 1;
 template $DmWindow : Adw.ApplicationWindow {
 	default-width: 1000;
 	default-height: 600;
+	width-request: 360;
+	height-request: 700;
 	title: "Device Viewer";
+  Adw.Breakpoint {
+    condition ("max-width: 600px")
+    setters {
+      split_view.collapsed: true;
+    }
+  }
 	Adw.OverlaySplitView {
 		sidebar:
 		Adw.NavigationPage {
