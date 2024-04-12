@@ -3,13 +3,16 @@ namespace Dm.View {
 [GtkTemplate(ui="/io/github/ydalton/DeviceViewer/ui/view/drm/device.ui")]
 public class DrmDevice : Adw.Bin {
 	[GtkChild]
-	private unowned Gtk.Label title;
+	private unowned Adw.ActionRow title;
 	[GtkChild]
-	private unowned Gtk.Label driver_name;
+	private unowned Adw.ActionRow driver_name;
+	[GtkChild]
+	private unowned Adw.ActionRow type;
 
 	public DrmDevice(Dm.Model.Device _device) {
-		this.title.label = @"/dev/dri/$(_device.name)";
-		this.driver_name.label = @"Driver name: $(_device.driver)";
+		this.title.subtitle = @"/dev/dri/$(_device.name)";
+		this.driver_name.subtitle = _device.driver;
+		this.type.subtitle = _device.gpu ? "Yes" : "No";
 	}
 }
 

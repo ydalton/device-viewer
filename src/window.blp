@@ -25,25 +25,25 @@ template $DmWindow : Adw.ApplicationWindow {
 			}
 		};
 
-		Adw.NavigationPage main_page {
-			Adw.ToolbarView {
-				[top]
-				Adw.HeaderBar {}
-				content: 
-				Stack stack {
-					notify::visible-child => $notify_visible_child_cb();
-					StackPage {
-						title: "Display adapters (DRM)";
-						child:
-						$DmViewDrm drm {};
-					}
-					StackPage {
-						title: "Monitors";
-						child:
-						$DmViewMonitors {};
-					}
-				};
-			}
-		}
-	}
+    Adw.NavigationPage main_page {
+      Adw.ToolbarView {
+        [top]
+          Adw.HeaderBar {}
+        content:
+        Stack stack {
+          notify::visible-child => $notify_visible_child_cb();
+          StackPage {
+            title: "Display adapters (DRM)";
+            child:
+           $DmViewDrm drm {};
+          }
+          StackPage {
+            title: "Monitors";
+            child:
+            $DmViewMonitors {};
+          }
+        };
+      }
+    }
+  }
 }

@@ -2,17 +2,23 @@ using Gtk 4.0;
 using Adw 1;
 
 template $DmViewDrmDevice : Adw.Bin {
+	margin-top: 6;
+	margin-bottom: 6;
+	margin-start: 6;
   child:
   Adw.Clamp {
-    Box {
-      orientation: vertical;
-      Label title {
-        styles [
-          'title-1'
-        ]
+    Adw.PreferencesGroup {
+      Adw.ActionRow vendor {
+        title: _("Vendor");
       }
-      Label driver_name {
-
+      Adw.ActionRow title {
+        title: _("Device node");
+      }
+      Adw.ActionRow driver_name {
+        title: _("Driver name");
+      }
+      Adw.ActionRow type {
+        title: _("GPU");
       }
     }
   };
